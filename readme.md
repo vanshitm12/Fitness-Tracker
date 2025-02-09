@@ -1,32 +1,26 @@
-Project Overview
-
-The Fitness Tracker & Meal Planner is a web application designed to help users track their workouts, monitor their progress, and get personalized meal recommendations based on their activities. The app integrates the Nutritionix API to provide meal suggestions tailored to the calories burned during workouts.
-
+Fitness Tracker & Meal Planner
+Overview
+The Fitness Tracker & Meal Planner is a web application designed to help users log workouts, track progress, and receive personalized meal recommendations based on their activities. By integrating the Nutritionix API, the app provides tailored meal suggestions based on calories burned during workouts, making fitness tracking more intuitive and goal-oriented.
 
 Features
-
-Workout Logging:
-Log workouts with details like type, duration, and calories burned.
-View a list of logged workouts.
-Progress Tracking:
-Track total calories burned and active minutes.
-Visualize progress using a bar chart (Chart.js).
-
-
-Meal Recommendations:
-
-Get meal recommendations based on the type of workout and calories burned.
-Display meal details, including calories and macronutrients.
-
+1. Workout Logging
+Log workouts with details such as type, duration, and calories burned.
+View a history of logged workouts for easy tracking.
+2. Progress Tracking
+Monitor total calories burned and active minutes over time.
+Visualize progress using interactive bar charts (powered by Chart.js).
+3. Meal Recommendations
+Get personalized meal suggestions based on workout type and calories burned.
+View meal details, including calories and macronutrient breakdown.
 Technologies Used
-
-Frontend:
-HTML, CSS, JavaScript
-Chart.js for progress visualization
-
-API:
-Nutritionix API for meal recommendations
-
+Frontend
+HTML, CSS, JavaScript – For building a responsive and interactive UI.
+Chart.js – For visualizing workout progress with charts.
+API Integration
+Nutritionix API – Fetches meal recommendations based on calories burned.
+Development Tools
+Visual Studio Code – Primary development environment.
+Browser Developer Tools – Used for debugging and testing.
 Tools:
 Visual Studio Code.
 Browser Developer Tools for debugging
