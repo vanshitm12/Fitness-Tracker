@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Login</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+   *,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-gradient-start: #1e1e1e;
+    --bg-gradient-end: #333333;
+    --form-bg: #424242;
+    --input-bg: #333;
+    --accent-pink: #ff4081;
+    --accent-pink-hover: #e91e63;
+    --accent-blue: #03a9f4;
+    --accent-blue-hover: #0288d1;
+    --error-color: #d32f2f;
+    --border-color: #555;
+    --text-light: #fff;
+    --text-muted: #aaa;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --social-bg: rgba(255, 255, 255, 0.2);
+    --social-bg-hover: rgba(255, 255, 255, 0.3);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Background Shapes */
+.background {
+    width: 430px;
+    height: 520px;
+    /* position: absolute; */
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+}
+
+.shape {
+    height: 250px;
+    width: 250px;
+    /* position: absolute; */
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(45deg, var(--accent-pink), #ff80ab);
+    left: -90px;
+    top: -100px;
+}
+
+.shape:last-child {
+    background: linear-gradient(45deg, var(--accent-blue), #00bcd4);
+    right: -50px;
+    bottom: -100px;
+}
+
+/* Form Container */
+form {
+    width: 100%;
+    max-width: 400px;
+    background: var(--form-bg);
+    /* position: relative; */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    animation: fadeIn 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+}
+
+/* Form Elements */
+form h3 {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--accent-pink);
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-light);
+    width: 100%; /* Ensures label is full width */
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 10px;
+    background: var(--input-bg);
+    color: var(--text-light);
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--accent-pink);
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.7);
+    outline: none;
+}
+
+::placeholder {
+    color: var(--text-muted);
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background: var(--accent-pink);
+    color: var(--text-light);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--accent-pink-hover);
+    transform: scale(1.05);
+}
+
+/* Links & Messages */
+.signup {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup:hover {
+    color: var(--accent-blue-hover);
+}
+
+#inc {
+    color: var(--error-color);
+    margin-top: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Social Login */
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social div {
+    background: var(--social-bg);
+    width: 150px;
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: var(--text-light);
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.social div:hover {
+    background: var(--social-bg-hover);
+}
+
+.social i {
+    margin-right: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Login Here</h3>
+        <p id = inc></p>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <button id = "doit">Log In</button>
+        <a href="index.html"><p class = "signup">Or Sign Up</p></a>
+    </form>
+    <script src = "login.js" type = "module" defer></script>
+</body>
+</html>

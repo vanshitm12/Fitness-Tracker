@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker & Meal Planner1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Fitness Tracker</h1>
+            <ul>
+                <li><a href="#dashboard">Home</a></li>
+                <li><a href="#workouts">Workouts</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#meals">Meals</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Dashboard Overview -->
+        <section id="dashboard" class="container">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <div class="card">Calories Burned: <span id="calories">0</span></div>
+                <div class="card">Active Minutes: <span id="active">0</span></div>
+            </div>
+        </section>
+        
+        <!-- Workout Log -->
+        <section id="workouts" class="container">
+            <h2>Workout Log</h2>
+            <!-- Workout Input Form -->
+            <form id="workout-form">
+                <label for="workout-type">Workout Type:</label>
+                <input type="text" id="workout-type" placeholder="e.g., Running" required>
+                
+                <label for="workout-duration">Duration (minutes):</label>
+                <input type="number" id="workout-duration" placeholder="e.g., 30" required>
+                
+                <label for="workout-calories">Calories Burned:</label>
+                <input type="number" id="workout-calories" placeholder="e.g., 200" required>
+                
+                <button type="submit">Log Workout</button>
+            </form>
+            <ul id="workout-list">
+                <li>No workouts logged yet.</li>
+            </ul>
+        </section>
+        
+        <!-- Progress Chart (Chart.js Placeholder) -->
+        <section id="progress" class="container">
+            <h2>Progress</h2>
+            <canvas id="progressChart"></canvas>
+        </section>
+        
+        <!-- Meal Recommendations -->
+        <section id="meals" class="container">
+            <h2>Meal Recommendations</h2>
+            <ul id="meal-list">
+                <li>No meals suggested yet.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Fitness Tracker & Meal Planner &copy; 2025</p>
+    </footer>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+       }
+</script>
+    <script type="module"src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+</body>
+</html>

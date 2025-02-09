@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #1abc9c;
+    --primary-hover: #16a085;
+    --bg-dark: #1c2833;
+    --bg-input: #34495e;
+    --bg-input-focus: #2c3e50;
+    --text-light: #ecf0f1;
+    --text-muted: #95a5a6;
+    --border-color: #7f8c8d;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --glow-color: rgba(26, 188, 156, 0.5);
+}
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    background: var(--bg-dark);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    text-align: center;
+    width: 380px;
+    animation: slideUp 1s ease-out;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Styling */
+.form-box h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-input);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-box input:focus {
+    border-color: var(--primary-color);
+    background: var(--bg-input-focus);
+    box-shadow: 0 0 10px var(--glow-color);
+    outline: none;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.form-box button:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+.form-box p {
+    margin-top: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.form-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-box a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
