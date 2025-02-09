@@ -132,13 +132,13 @@ async function fetchMealRecommendations(activityType, caloriesBurned) {
         query = `high-protein, high-carb meal with ${caloriesBurned} calories`;
     }
 
-    
+
     try {
         const response = await fetch("https://trackapi.nutritionix.com/v2/natural/nutrients", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-app-id": "8385b482",
+                "x-app-id": "410476d3",
                 "x-app-key":"e6cba655e40f677254a2f18be6464dcb"
             },
             body: JSON.stringify({ query })
@@ -186,3 +186,6 @@ function updateMealUI(meals) {
 document.addEventListener("DOMContentLoaded", () => {
     updateWorkoutUI();
 });
+
+
+ye paste karde
