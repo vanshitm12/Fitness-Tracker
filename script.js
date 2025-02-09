@@ -186,6 +186,3 @@ function updateMealUI(meals) {
 document.addEventListener("DOMContentLoaded", () => {
     updateWorkoutUI();
 });
-
-
-ye paste karde
